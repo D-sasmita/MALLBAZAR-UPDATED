@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MallBazzar - About Us</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+
+     <!-- Correct Font Awesome CDN -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+     
+     <link rel="stylesheet" href="style.css">
+     
+</head>
+<body>
+   <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+    <div class="container">
+      <img src="images/logo.png" alt="logoimage" class="logo-image">
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Search Bar Section -->
+        <form class="d-flex mx-auto w-50">
+          <div class="input-group">
+            <span class="input-group-text bg-white rounded-start">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <input class="form-control rounded-pill" type="search" placeholder="Search for products or categories"
+              aria-label="Search">
+          </div>
+        </form>
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="userprofilepage.html">My Profile</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="login.html">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- About Us Section -->
+<div class="about-us-container mt-5 ">
+  <h1 class="about-title text-center mb-4">About Us</h1>
+  
+  <div class="row about-content">
+      <div class="col-md-6 about-journey mb-5">
+          <h3>Our Journey</h3>
+          <p>
+              MallBazaar started in 2015 with a mission to revolutionize online shopping. Our founders, Jane Williams and Michael Carter, shared a vision to make high-quality products accessible to everyone, no matter where they are. What began as a small operation has grown into a global e-commerce platform, serving millions of customers across 20 countries.
+          </p>
+      </div>
+      
+      <div class="col-md-6 about-values mb-5">
+          <h3>What We Stand For</h3>
+          <p>
+              At MallBazaar, we believe in offering premium products at unbeatable prices. Our core values include integrity, transparency, and a commitment to sustainability. We carefully curate our inventory to feature ethically sourced products, and we partner with global brands to bring you the latest trends in fashion, electronics, and home goods.
+          </p>
+      </div>
+  </div>
+
+  <!-- Team Section -->
+  <section class="row mt-4 team-section">
+      <div class="col-md-12 text-center">
+          <h3 class="team-title">Meet Our Team</h3>
+          <p>
+              Behind every order is a dedicated team of professionals working hard to ensure your shopping experience is seamless. Our team includes experts in technology, customer service, logistics, and marketing.
+          </p>
+      </div>
+  </section>
+
+  <section class="row mt-4 team-members">
+      <div class="col-md-4 text-center team-member mb-4">
+          <img src="images/s.avif" alt="Sasmita Das, Co-Founder & CEO" class="img-fluid rounded-circle team-photo">
+          <h5>Sasmita Das</h5>
+          <p>Co-Founder & CEO</p>
+      </div>
+      <div class="col-md-4 text-center team-member mb-4">
+          <img src="images/r.avif" alt="Rohit Verma, Co-Founder & COO" class="img-fluid rounded-circle team-photo">
+          <h5>Rohit Verma</h5>
+          <p>Co-Founder & COO</p>
+      </div>
+      <div class="col-md-4 text-center team-member mb-4">
+          <img src="images/p.avif" alt="Priya Kapoor, Head of Marketing" class="img-fluid rounded-circle team-photo">
+          <h5>Priya Kapoor</h5>
+          <p>Head of Marketing</p>
+      </div>
+  </section>
+
+  <!-- Why Shop With Us Section -->
+  <section class="row mt-4 why-shop">
+      <div class="col-md-12 text-center">
+          <h3 class="why-title">Why Shop With Us?</h3>
+          <p>
+              We prioritize customer satisfaction above everything else. Our 24/7 customer support, easy returns policy, and secure payment options ensure that every step of your shopping journey is hassle-free. Whether you’re browsing for the latest fashion or shopping for electronics, you can trust MallBazaar to deliver quality at your doorstep.
+          </p>
+      </div>
+  </section>
+</div>
+
+
+       <!-- Footer -->
+
+       <footer class="mt-5 py-5">
+        <div class="row container mx-auto pt-5">
+          <div class="footer-one col-lg-3 col-md-6 col-12">
+            <img src="images/logo.png" alt="" class="logo-image">
+            <p class="pt-3">At MallBazaar, we bring you the best of both worlds—an authentic bazaar experience combined with the convenience of modern online shopping. Explore a wide range of exclusive products, from rare collectibles to the latest fashion trends, all at competitive prices. Whether you’re looking for traditional items with a modern twist or trendy products that stand out, MallBazaar has something for everyone.</p>
+
+          </div>
+          <div class="footer-one  col-lg-3 col-md-6 col-12 mb-3 ">
+            <h5 class="pb-2">Featured</h5>
+            <ul class="text-uppercase list-unstyled">
+              <li><a href="#">Electronics</a> </li>
+              <li><a href="#">clothes</a> </li>
+              <li><a href="#">HomeDecor</a> </li>
+              <li><a href="#">Watches</a> </li>
+              <li><a href="#">Bags</a> </li>
+            </ul>
+          </div>
+          <div class="footer-one  col-lg-3 col-md-6 col-12 mb-3 ">
+            <h5 class="pb-2">Contact Us</h5>
+            <div>
+              <h6 class="text-uppercase">Address</h6>
+              <p>193,Andul Road,Kolkataa,WB</p>
+            </div>
+            <div>
+              <h6 class="text-uppercase">Phone</h6>
+              <p>4342211234</p>
+            </div>
+            <div>
+              <h6 class="text-uppercase">Email</h6>
+              <p>Mallbazar@gmail.com</p>
+            </div>
+          </div>
+          <div class="footer-one  col-lg-3 col-md-6 col-12 ">
+            <h5 class="pb-2">Brands We Serve</h5>
+<ul class="list-unstyled" style="color: white;">
+  <li>Nike</li>
+  <li>Adidas</li>
+  <li>Puma</li>
+  <li>Gucci</li>
+  <li>Reebok</li>
+  <li>Under Armour</li>
+  <li>Levi's</li>
+  <li>Zara</li>
+</ul>
+
+          </div>
+        </div>
+        <div class="copyright mt-5 container">
+          <div class="row container mx-autp">
+            <div class="col-lg-3 col-md-6 col-12 mb-4">
+              <img src="images/payment.jpeg" alt="" width="100px" height="40px">
+            </div>
+            <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2 "></div>
+            <p> Mallbazar eCommerce @2024 . All rights Resrerved</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-12">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            
+
+        </div>
+       </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

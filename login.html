@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            width: 100vw;
+            height: 100vh;
+            background: url(images/login.jpg) no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2 class="login-header">Login</h2>
+        <form action="#" method="POST" class="contact-form" onsubmit="return validate();">
+            <div class="login-form-group">
+                <input type="text" id="email" >
+                <label>Email</label>
+               
+                <i class="fa-solid fa-envelope"></i>
+                <span id="e" class="error-message"></span> 
+            </div>
+            <div class="login-form-group">
+                <input type="password" id="password" >
+                <label>Password</label>
+               
+                <i class="fa-solid fa-lock"></i>
+                <span id="p" class="error-message"></span>
+            </div>
+            <p class="login-text"><input type="checkbox">Remember Me <a href="#">Forget Password</a></p>
+            <input id="login-btn" type="submit" value="Login">
+            <p class="login-text">Don't have an account? <a href="signup.html">Register</a></p>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

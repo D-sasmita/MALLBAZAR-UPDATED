@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopping Website</title>
+
+  
+  
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Correct Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 fixed-top">
+    <div class="container">
+      <img src="images/logo.png" alt="logoimage" class="logo-image" >
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#featured">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactus.html">Contact</a>
+          </li>
+        </ul>
+
+        <!-- Search Bar Section -->
+        <form class="d-flex mx-auto w-50">
+          <div class="input-group">
+            <span class="input-group-text bg-white rounded-start">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <input class="form-control rounded-pill" type="search" placeholder="Search for products or categories"
+              aria-label="Search">
+          </div>
+        </form>
+
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="cart.html"><i class="fas fa-shopping-cart"></i></a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fas fa-user"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="signup.html">signin/signup</a></li>
+              
+              
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero section -->
+
+  <section id="home">
+    <div class="container ">
+      <h5>JUST LANDED</h5>
+      <h1><span>Unbeatable Deals</span> <br>Await You</h1>
+      <p>Step into the season with comfort and style<br> Designed for your everyday adventures.</p>
+      <button>Explore Now</button>
+
+
+
+    </div>
+  </section>
+
+  <!-- Brand section -->
+  <section id="brand" class="container">
+    <div class="row" class="row m-0 py-5">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/1.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/2.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/3.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/4.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/5.png" alt="">
+      <img class="img-fluid col-lg-2 col-md-4 col-6" src="images/6.png" alt="">
+    </div>
+  </section>
+  
+
+  <!-- first categories -->
+  <section id="featured" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+      <h3>Our Featured</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out our new products with fair prices</p>
+
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/b2.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Pastel Handbag</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/s1.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">RareStep</h5>
+        <h4 class="p-price">3500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/jacket.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Titanium Weave</h5>
+        <h4 class="p-price">5000</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/sunglass.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Spectra Noir</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Banner Third image -->
+
+  <section id="banner" class="my-5 py-5">
+    <div class="container">
+      <h4>MID SEASON'S SALE</h4>
+      <h1>Autumn Collection<br>Up To 20% OFF</h1>
+      <button class="text-uppercase">Shop Now</button>
+    </div>
+
+  </section>
+
+  <section id="clothes" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+      <h3>Decode Comfort, Elevate Living!</h3>
+      <hr class="mx-auto">
+      <p>Here you can check out our new products with fair prices</p>
+
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/home1.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Elysium Seat</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/home2.jpg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Eternal Grace</h5>
+        <h4 class="p-price">2500</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/home3.jpg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Sculpted Serenity</h5>
+        <h4 class="p-price">2500</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/home4.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">GlowSync</h5>
+        <h4 class="p-price">2500</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="Watches" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+      <h3>Best Watches</h3>
+      <hr class="mx-auto">
+      <p>Explore Our Latest Arrivals—Quality Products at Fair Prices!</p>
+
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/watch2.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">ChronoElite</h5>
+        <h4 class="p-price">2600</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/watch1.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Timeless Precision</h5>
+        <h4 class="p-price">3000</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/watch3.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Eclipse Watch</h5>
+        <h4 class="p-price">4000</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/watch4.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">LuxeTimepiece</h5>
+        <h4 class="p-price">3500</h4>
+        <a href="productdescriptionpage.html" class="buy-btn">Buy Now</a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="shoes" class="my-5 pb-5">
+    <div class="container text-center mt-5 py-5">
+      <h3>women's Dresses</h3>
+      <hr class="mx-auto">
+      <p>Check Out Our Exciting New Products—Affordable Prices Await!</p>
+
+    </div>
+    <div class="row mx-auto container-fluid">
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/d4.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Ethereal Elegance</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/tr.webp" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Chic Harmony</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/d1.jpeg" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Timeless Allure</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+
+      <div class="product text-center col-lg-3 col-md-4 col-12">
+        <img class="img-fluid mb-3" src="images/tr2.webp" alt="">
+        <div class="star ">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <h5 class="p-name">Radiant Flair</h5>
+        <h4 class="p-price">2500</h4>
+        <button class="buy-btn">Buy Now</button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+
+  <footer class="mt-5 py-5">
+    <div class="row container mx-auto pt-5">
+      <div class="footer-one col-lg-3 col-md-6 col-12">
+        <img src="images/logo.png" alt="" class="logo-image">
+        <p class="pt-3">At MallBazaar, we bring you the best of both worlds—an authentic bazaar experience combined with
+          the convenience of modern online shopping. Explore a wide range of exclusive products, from rare collectibles
+          to the latest fashion trends, all at competitive prices. Whether you’re looking for traditional items with a
+          modern twist or trendy products that stand out, MallBazaar has something for everyone.</p>
+
+      </div>
+      <div class="footer-one  col-lg-3 col-md-6 col-12 mb-3 ">
+        <h5 class="pb-2">Featured</h5>
+        <ul class="text-uppercase list-unstyled">
+          <li><a href="#">Electronics</a> </li>
+          <li><a href="#">clothes</a> </li>
+          <li><a href="#">HomeDecor</a> </li>
+          <li><a href="#">Watches</a> </li>
+          <li><a href="#">Bags</a> </li>
+        </ul>
+      </div>
+      <div class="footer-one  col-lg-3 col-md-6 col-12 mb-3 ">
+        <h5 class="pb-2">Contact Us</h5>
+        <div>
+          <h6 class="text-uppercase">Address</h6>
+          <p>193,Andul Road,Kolkataa,WB</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase">Phone</h6>
+          <p>4342211234</p>
+        </div>
+        <div>
+          <h6 class="text-uppercase">Email</h6>
+          <p>Mallbazar@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-one  col-lg-3 col-md-6 col-12 ">
+        <h5 class="pb-2">Brands We Serve</h5>
+        <ul class="list-unstyled" style="color: white;">
+          <li>Nike</li>
+          <li>Adidas</li>
+          <li>Puma</li>
+          <li>Gucci</li>
+          <li>Reebok</li>
+          <li>Under Armour</li>
+          <li>Levi's</li>
+          <li>Zara</li>
+        </ul>
+
+      </div>
+    </div>
+    <div class="copyright mt-5 container">
+      <div class="row container mx-autp">
+        <div class="col-lg-3 col-md-6 col-12 mb-4">
+          <img src="images/payment.jpeg" alt="" width="100px" height="40px">
+        </div>
+        <div class="col-lg-4 col-md-6 col-12 text-nowrap mb-2 "></div>
+        <p> Mallbazar eCommerce @2024 . All rights Resrerved</p>
+      </div>
+      <div class="col-lg-3 col-md-6 col-12">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+
+    </div>
+  </footer>
+  <!-- Scripts -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
