@@ -172,6 +172,12 @@
                 passwordError.textContent = "";
             }
 
+            // If validation passes, redirect to userprofilepage.html
+            if (isValid) {
+                window.location.href = "userprofilepage.html";
+                return false; // Prevent the form from actually submitting to "#"
+            }
+
             return isValid;
         }
     </script>
