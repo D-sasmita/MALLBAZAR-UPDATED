@@ -300,27 +300,28 @@
           return;
         }
   
+        // Inside the loop where you are displaying cart items in cart.html
         cart.forEach(item => {
           const row = document.createElement('tr');
           row.classList.add('cart-item');
           row.innerHTML = `
-        <td>
-          <div class="product-details d-flex align-items-center">
-            <img src="images/placeholder.png" alt="${item.name}" class="product-thumbnail">
-            <span class="ml-2 product-name">${item.name}</span>
-          </div>
-        </td>
-        <td class="item-price">${item.price.toFixed(2)}</td>
-        <td>
-          <input type="number" class="form-control quantity-control quantity-input" value="${item.quantity}" min="1" data-product-id="${item.id}">
-        </td>
-        <td class="item-total">${(item.price * item.quantity).toFixed(2)}</td>
-        <td>
-          <button class="btn btn-danger btn-sm remove-item" data-product-id="${item.id}">
-            <i class="fas fa-trash"></i> Remove
-          </button>
-        </td>
-      `;
+            <td>
+              <div class="product-details d-flex align-items-center">
+                <img src="${item.image}" alt="${item.name}" class="product-thumbnail">
+                <span class="ml-2 product-name">${item.name}</span>
+              </div>
+            </td>
+            <td class="item-price">${item.price.toFixed(2)}</td>
+            <td>
+              <input type="number" class="form-control quantity-control quantity-input" value="${item.quantity}" min="1" data-product-id="${item.id}">
+            </td>
+            <td class="item-total">${(item.price * item.quantity).toFixed(2)}</td>
+            <td>
+              <button class="btn btn-danger btn-sm remove-item" data-product-id="${item.id}">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+            </td>
+          `;
           cartItemsContainer.appendChild(row);
         });
   

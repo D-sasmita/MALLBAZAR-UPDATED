@@ -114,7 +114,7 @@
     </div>
     <div class="row mx-auto container-fluid">
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/b2.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/b2.jpeg" alt="" data-product-image="images/b2.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -130,7 +130,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/s1.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/s1.jpeg" alt="" data-product-image="images/s1.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -147,7 +147,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/jacket.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/jacket.jpeg" alt="" data-product-image="images/jacket.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -163,7 +163,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/sunglass.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/sunglass.jpeg" alt="" data-product-image="images/sunglass.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -201,7 +201,7 @@
     </div>
     <div class="row mx-auto container-fluid">
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/home1.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/home1.jpeg" alt="" data-product-image="images/home1.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -216,7 +216,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/home2.jpg" alt="">
+        <img class="img-fluid mb-3" src="images/home2.jpg" alt="" data-product-image="images/home2.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -232,7 +232,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/home3.jpg" alt="">
+        <img class="img-fluid mb-3" src="images/home3.jpg" alt="" data-product-image="images/home3.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -247,7 +247,7 @@
       </div>
 
       <div class="product text-center col-lg-3 col-md-4 col-12">
-        <img class="img-fluid mb-3" src="images/home4.jpeg" alt="">
+        <img class="img-fluid mb-3" src="images/home4.jpeg" alt="" data-product-image="images/home4.jpeg">
         <div class="star ">
           <i class="fas fa-star"></i>
           <i class="fas fa-star"></i>
@@ -501,7 +501,11 @@
       });
   
       function addToCart(id, name, price) {
-        const existingItem = cart.find(item => item.id === id);
+      
+        const productDiv = document.querySelector(`.product .p-price[data-product-id="${id}"]`).closest('.product');
+  const productImage = productDiv.querySelector('img').dataset.productImage; // Get the image source
+
+  const existingItem = cart.find(item => item.id === id);
   
         if (existingItem) {
           existingItem.quantity++;
@@ -510,7 +514,8 @@
             id: id,
             name: name,
             price: price,
-            quantity: 1
+            quantity: 1,
+            image: productImage
           });
         }
   
