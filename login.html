@@ -1,121 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animated Login Form</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
-
-        /* Body styling */
-        body {
-            width: 100vw;
-            height: 100vh;
-            background: url(images/login.jpg) no-repeat;
-            background-position: center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .login-container {
-            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-
-        .login-header {
-            font-size: 2em;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .login-form-group {
-            position: relative;
-            margin-bottom: 25px;
-        }
-
-        .login-form-group input {
-            width: 100%;
-            padding: 10px 35px 10px 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        .login-form-group label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            color: #777;
-            transition: 0.3s ease-in-out;
-            pointer-events: none;
-        }
-
-        .login-form-group input:focus + label,
-        .login-form-group input:valid + label {
-            transform: translateY(-20px);
-            font-size: 0.8em;
-            color: #000000;
-        }
-
-        .login-form-group i {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            color: #555;
-        }
-
-        .error-message {
-            display: block;
-            margin-top: 5px;
-            color: red;
-            font-size: 0.9em;
-        }
-
-        .login-text {
-            color: #000000;
-            margin-bottom: 15px;
-            font-size: 0.9em;
-        }
-
-        .login-text a {
-            color: #007bff;
-            text-decoration: none;
-        }
-
-        .login-text a:hover {
-            text-decoration: underline;
-        }
-
-        #login-btn {
-            width: 100%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1em;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        #login-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animated Login Form</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+            }
+    
+            /* Body styling */
+            body {
+                width: 100vw;
+                height: 100vh;
+                background: url(images/login.jpg) no-repeat;
+                background-position: center;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+    
+            .login-container {
+                background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+    
+            .login-header {
+                font-size: 2em;
+                color: #333;
+                margin-bottom: 20px;
+            }
+    
+            .login-form-group {
+                position: relative;
+                margin-bottom: 25px;
+            }
+    
+            .login-form-group input {
+                width: 100%;
+                padding: 10px 35px 10px 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                font-size: 1em;
+                color: #333; /* Added this line */
+            }
+    
+            .login-form-group label {
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                color: #777;
+                transition: 0.3s ease-in-out;
+                pointer-events: none;
+            }
+    
+            .login-form-group input:focus + label,
+            .login-form-group input:valid + label {
+                transform: translateY(-20px);
+                font-size: 0.8em;
+                color: #000000;
+            }
+    
+            .login-form-group i {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                color: #555;
+            }
+    
+            .error-message {
+                display: block;
+                margin-top: 5px;
+                color: red;
+                font-size: 0.9em;
+            }
+    
+            .login-text {
+                color: #000000;
+                margin-bottom: 15px;
+                font-size: 0.9em;
+            }
+    
+            .login-text a {
+                color: #007bff;
+                text-decoration: none;
+            }
+    
+            .login-text a:hover {
+                text-decoration: underline;
+            }
+    
+            #login-btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 1.1em;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+            }
+    
+            #login-btn:hover {
+                background-color: #0056b3;
+            }
+        </style>
+    </head>
 <body>
     <div class="login-container">
         <h2 class="login-header">Login</h2>
