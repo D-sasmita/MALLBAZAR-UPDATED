@@ -287,10 +287,11 @@
     document.addEventListener('DOMContentLoaded', function() {
       const cartItemsContainer = document.getElementById('cart-item-list');
       const cartTotalElement = document.getElementById('total-cart-price');
-      const cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
+      let cart = JSON.parse(localStorage.getItem('shoppingCart')) || [];
   
       displayCartItems();
       updateCartTotal();
+      updateCartCountNavbar(); // Ensure the cart count in the nav is updated on this page load
   
       function displayCartItems() {
         cartItemsContainer.innerHTML = ''; // Clear any existing items
@@ -300,7 +301,6 @@
           return;
         }
   
-        // Inside the loop where you are displaying cart items in cart.html
         cart.forEach(item => {
           const row = document.createElement('tr');
           row.classList.add('cart-item');
@@ -355,7 +355,7 @@
           localStorage.setItem('shoppingCart', JSON.stringify(cart));
           displayCartItems(); // Re-render the cart to update totals
           updateCartTotal();
-          updateCartCountNavbar(); // Update the cart count in the nav (if it exists on this page)
+          updateCartCountNavbar();
         }
       }
   
@@ -372,13 +372,13 @@
       function removeItem(productId) {
         cart = cart.filter(item => item.id !== productId);
         localStorage.setItem('shoppingCart', JSON.stringify(cart));
-        displayCartItems();
-        updateCartTotal();
+        displayCartItems(); // Re-render the cart to update the view
+        updateCartTotal(); // Update the total price
         updateCartCountNavbar(); // Update the cart count in the nav
       }
   
       function updateCartCountNavbar() {
-        const cartCountElement = document.getElementById('cart-count'); // Assuming this ID exists in your navigation on this page
+        const cartCountElement = document.getElementById('cart-count'); // Assuming this ID exists in your navigation
         if (cartCountElement) {
           let totalQuantity = 0;
           cart.forEach(item => {
@@ -386,6 +386,15 @@
           });
           cartCountElement.textContent = totalQuantity;
         }
+      }
+  
+      // Simple "Proceed to Checkout" alert
+      const checkoutButton = document.querySelector('.checkout-action-button');
+      if (checkoutButton) {
+        checkoutButton.addEventListener('click', function() {
+          alert('Proceeding to payment...');
+          // In a real application, you would redirect to a payment page or show a payment modal here.
+        });
       }
     });
   </script>
