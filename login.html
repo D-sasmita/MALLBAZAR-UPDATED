@@ -26,6 +26,94 @@
             align-items: center;
             justify-content: center;
         }
+
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-header {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .login-form-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .login-form-group input {
+            width: 100%;
+            padding: 10px 35px 10px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .login-form-group label {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #777;
+            transition: 0.3s ease-in-out;
+            pointer-events: none;
+        }
+
+        .login-form-group input:focus + label,
+        .login-form-group input:valid + label {
+            transform: translateY(-20px);
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .login-form-group i {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #555;
+        }
+
+        .error-message {
+            display: block;
+            margin-top: 5px;
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .login-text {
+            color: #555;
+            margin-bottom: 15px;
+            font-size: 0.9em;
+        }
+
+        .login-text a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .login-text a:hover {
+            text-decoration: underline;
+        }
+
+        #login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #login-btn:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -33,14 +121,14 @@
         <h2 class="login-header">Login</h2>
         <form action="#" method="POST" class="contact-form" onsubmit="return validate();">
             <div class="login-form-group">
-                <input type="text" id="email" >
-                <label>Email</label>
+                <input type="text" id="email" required>
+                <label for="email">Email</label>
                 <i class="fa-solid fa-envelope"></i>
                 <span id="e" class="error-message"></span>
             </div>
             <div class="login-form-group">
-                <input type="password" id="password" >
-                <label>Password</label>
+                <input type="password" id="password" required>
+                <label for="password">Password</label>
                 <i class="fa-solid fa-lock"></i>
                 <span id="p" class="error-message"></span>
             </div>
@@ -49,6 +137,43 @@
             <p class="login-text">Don't have an account? <a href="signup.html">Register</a></p>
         </form>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function validate() {
+            console.log("validate function called from login form");
+            let isValid = true;
+
+            const emailInput = document.getElementById("email");
+            const email = emailInput.value.trim();
+            const emailError = document.getElementById("e");
+            const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+            if (email === "") {
+                emailError.textContent = "Email is required.";
+                isValid = false;
+            } else if (!emailPattern.test(email)) {
+                emailError.textContent = "Invalid email format.";
+                isValid = false;
+            } else {
+                emailError.textContent = "";
+            }
+
+            const passwordInput = document.getElementById("password");
+            const password = passwordInput.value.trim();
+            const passwordError = document.getElementById("p");
+
+            if (password === "") {
+                passwordError.textContent = "Password is required.";
+                isValid = false;
+            } else if (password.length < 6) {
+                passwordError.textContent = "Password must be at least 6 characters long.";
+                isValid = false;
+            } else {
+                passwordError.textContent = "";
+            }
+
+            return isValid;
+        }
+    </script>
 </body>
 </html>
